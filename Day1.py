@@ -1,1 +1,2 @@
-url = "https://adventofcode.com/2022/day/1/input"    
+ with open('Day1Input.txt') as f: 
+    lines=f.readlines()
