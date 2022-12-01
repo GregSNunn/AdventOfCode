@@ -28,4 +28,17 @@ print(maxcal)
 #Part 2
 ##############
 
+elfcals = []
 
+for j in inputf:
+
+    if j != '\n': 
+        elfcal = elfcal + int(i)
+    else: 
+        elfcals.append(elfcal)
+
+elfcals.sort(reverse=True)
+top3=elfcals[0:3]
+
+sum=sum(top3)
+print(sum)
