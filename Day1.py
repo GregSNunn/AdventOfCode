@@ -29,13 +29,14 @@ print(maxcal)
 ##############
 
 elfcals = []
-
+elfcal2 = 0
 for j in inputf:
 
     if j != '\n': 
-        elfcal = elfcal + int(i)
+        elfcal2 = elfcal2 + int(j)
     else: 
-        elfcals.append(elfcal)
+        elfcals.append(elfcal2)
+        elfcal2 = 0
 
 elfcals.sort(reverse=True)
 top3=elfcals[0:3]
