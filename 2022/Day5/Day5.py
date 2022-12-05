@@ -10,10 +10,12 @@ def crane9000(stack1, stack2):
 #Crane 9001 Moves the top of Stack1 to top of Stack2
 def crane9001(no, stack1, stack2):
     for x in range(0, no):
-        crate = stack1[no-x-1]
-        stack1.remove(stack1[no-x-1])
+        crate = stack1[no-1-x]
         stack2.insert(0, crate)
+    del stack1[:no]
+        
 
+#Determine List of Top Crates
 def topcrate(crate_set):
     top=''
     for sublist in crate_set:
