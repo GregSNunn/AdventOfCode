@@ -6,6 +6,15 @@ def packet_chk(list, start, low):
     else:
         return False
 
+def pack_loop(msglen):
+    for x in range(msglen-1, len(stream)):
+        chk=packet_chk(stream, x, msglen-1)
+        if chk == True:
+            print(x+1)
+            break
+        else: 
+            continue
+
 #Main Code
 filea='2022/Day6/Day6Input.txt'
 
@@ -13,18 +22,5 @@ with open(filea, 'r') as f:
     inputf=f.read()
 stream=([*inputf])
 
-for x in range(3, len(stream)):
-    chk=packet_chk(stream, x, 3)
-    if chk == True:
-        print(x+1)
-        break
-    else: 
-        continue
-
-for y in range(13, len(stream)):
-    chk2=packet_chk(stream, y, 13)
-    if chk2 == True:
-        print(y+1)
-        break
-    else: 
-        continue
+pack_loop(4) #Part 1
+pack_loop(14) # Part2
