@@ -6,7 +6,6 @@ def packet_chk(list, start, low):
     else:
         return False
 
-
 #Main Code
 filea='2022/Day6/Day6Input.txt'
 
@@ -22,10 +21,10 @@ for x in range(3, len(stream)):
     else: 
         continue
 
-for y in range(14, len(stream)):
-    chk2=packet_chk(stream, y, 14)
+for y in range(13, len(stream)):
+    chk2=packet_chk(stream, y, 13)
     if chk2 == True:
-        print(y)
+        print(y+1)
         break
     else: 
         continue
